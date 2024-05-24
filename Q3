@@ -1,0 +1,26 @@
+<?php
+function Prime(int $i){
+    if($i==1){
+        return 0;
+    }
+    for($a=2;$a<$i;$a++)
+    {
+        if($i%$a==0){
+            return 0;
+        }
+        else{
+            return 1;
+        }
+    }
+}
+$l=0;
+for($x=0;$x<=600851475143;$x++)
+{
+    if(Prime($x)){
+        if($l<$x){
+            $l=$x;
+        }
+    }
+}
+echo $l;
+?>
