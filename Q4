@@ -10,4 +10,4 @@ for ($i = 999; $i >= 100; $i--) {
     }
 }
 echo $max;
-?>
+?>//Execution time: 0.10115003585815 seconds
