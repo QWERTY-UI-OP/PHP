@@ -3,7 +3,7 @@ function Prime(int $i){
     if($i==2){
         return 1;
     }
-    for($a=3;$a<$i;$a+=2)
+    for($a=3;$a< sqrt($i);$a+=2)
     {
         if($i%$a==0){
             return 0;
