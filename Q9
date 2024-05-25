@@ -12,4 +12,4 @@ function pt() {
 }
 
 echo pt();
-?>
+?>//Execution time: 0.0070087909698486 seconds
