@@ -15,4 +15,4 @@ while ($fibonacci <= 4000000) {
     }
 }
 echo $sum;
-?>
+?>//Execution time     => 0.00070405006408691
