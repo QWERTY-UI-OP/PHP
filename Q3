@@ -23,5 +23,5 @@ for($x=0;$x<=600851475143;$x++)
     }
 }
 echo $l;
-?>//Exceution time = 66.3298405931587
-//Execution time = 10.5981256388472
+?>//Exceution time = 66.3298405931587 seconds
+//Execution time = 10.5981256388472 seconds
