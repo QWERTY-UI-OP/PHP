@@ -1,0 +1,30 @@
+<?php
+$grid = [
+    [08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08],
+    [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00],
+    // ...
+    [01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48]
+];
+
+$maxProduct = 0;
+
+// Iterate through each cell in the grid
+for ($i = 0; $i < 20; $i++) {
+    for ($j = 0; $j < 20; $j++) {
+        // Calculate the product of four adjacent numbers in each direction
+        $productUp = $grid[$i][$j] * $grid[$i-1][$j] * $grid[$i-2][$j] * $grid[$i-3][$j];
+        $productDown = $grid[$i][$j] * $grid[$i+1][$j] * $grid[$i+2][j] * $grid[$i+3][$j];
+        $productLeft = $grid[$i][$j] * $grid[$i][$j-1] * $grid[$i][$j-2] * $grid[$i][$j-3];
+        $productRight = $grid[$i][$j] * $grid[$i][$j+1] * $grid[$i][$j+2] * $grid[$i][$j+3];
+        $productDiagonalUpLeft = $grid[$i][$j] * $grid[$i-1][$j-1] * $grid[$i-2][$j-2] * $grid[$i-3][$j-3];
+        $productDiagonalUpRight = $grid[$i][$j] * $grid[$i-1][$j+1] * $grid[$i-2][$j+2] * $grid[$i-3][$j+3];
+        $productDiagonalDownLeft = $grid[$i][$j] * $grid[$i+1][$j-1] * $grid[$i+2][$j-2] * $grid[$i+3][$j-3];
+        $productDiagonalDownRight = $grid[$i][$j] * $grid[$i+1][$j+1] * $grid[$i+2][$j+2] * $grid[$i+3][$j+3];
+
+        // Update the maximum product if necessary
+        $maxProduct = max($maxProduct, $productUp, $productDown, $productLeft, $productRight, $productDiagonalUpLeft, $productDiagonalUpRight, $productDiagonalDownLeft, $productDiagonalDownRight);
+    }
+}
+
+echo "The greatest product of four adjacent numbers in the same direction is: $maxProduct";
+?>//Execution time: 0.0001087188720703125 seconds
