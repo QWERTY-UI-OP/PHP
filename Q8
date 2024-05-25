@@ -15,4 +15,4 @@ for ($i = 0; $i < strlen($num) - 12; $i++) {
 
 echo "The greatest product of 13 adjacent digits is: $max_product";
 
-?>
+?>//Execution time: 0.0015709400177002 seconds
