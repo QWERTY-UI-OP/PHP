@@ -1,9 +1,9 @@
 <?php
 function Prime(int $i){
-    if($i==1){
+    if($i<=2){
         return 0;
     }
-    for($a=2;$a<$i;$a++)
+    for($a=2;$a<sqrt($i);$a+=2)
     {
         if($i%$a==0){
             return 0;
@@ -23,4 +23,5 @@ for($x=0;$x<=600851475143;$x++)
     }
 }
 echo $l;
-?>
+?>//Exceution time = 66.3298405931587
+//Execution time = 10.5981256388472
