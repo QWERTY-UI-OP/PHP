@@ -3,7 +3,10 @@ function prime($num) {
     if ($num < 2) {
         return 0;
     }
-    for ($i = 2; $i <= sqrt($num); $i++) {
+    if ($num = 2) {
+        return 1;
+    }
+    for ($i = 2; $i <= sqrt($num); $i+=2) {
         if ($num % $i == 0) {
             return 0;
         }
@@ -17,4 +20,5 @@ for ($num = 2; $num < 2000000; $num++) {
     }
 }
 echo "The sum of all prime numbers below two million is: $sum";
-?>
+?>//Execution time     => 6.1922969818115 (before)
+//Execution time     => 0.18077898025513 (after)
