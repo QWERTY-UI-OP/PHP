@@ -9,10 +9,11 @@ function d(int $i)
     }
     return 0;
 }
-$x=21;
+$x=9699690;
 while(d($x))
 {
     $x++;
 }
 echo "The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is = " . $x; 
-?>
+?>//Execution time: 10.862441062927 seconds
+//Execution time: 10.312803030014 seconds
