@@ -3,7 +3,7 @@ function Prime(int $i){
     if($i==2){
         return 1;
     }
-    for($a=2;$a<$i;$a++)
+    for($a=3;$a<$i;$a+=2)
     {
         if($i%$a==0){
             return 0;
@@ -22,5 +22,6 @@ while($y<=10001)
     }
     $x++;
 }
-echo --$x;
-?>
+echo $x;
+?>//Execution time: 0.0011320114135742 seconds
+//Execution time: 0.0030529499053955 seconds
